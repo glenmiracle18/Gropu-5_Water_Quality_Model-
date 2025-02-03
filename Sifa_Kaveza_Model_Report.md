@@ -1,4 +1,4 @@
-## Networks with L2 Regularization – Sifa Kaveza's Training Model
+# Networks with L2 Regularization – Sifa Kaveza's Training Model
 ## Executive Summary
 
 This report details the implementation and analysis of a neural network model for water quality classification. My model leverages L2 regularization as the primary optimization 
@@ -7,7 +7,7 @@ technique, alongside carefully selected hyperparameters, including a learning ra
 
 ## 1. Model Architecture and Implementation Choices
 
-# 1.1 L2 Regularization Implementation
+**1.1 L2 Regularization Implementation**
 
 I implemented L2 regularization with a strength parameter of [0.01]. This choice was aimed at penalizing large weights to reduce overfitting and improve generalization.
 
@@ -16,7 +16,6 @@ Why L2 Regularization? Unlike L1, L2 regularization does not force weights to ze
 **Analysis of Impact:**
 
 Improved generalization by minimizing overfitting.
-
 
 Ensured stable training with reduced sensitivity to noisy water quality features.
 
@@ -123,7 +122,7 @@ Performance is identical to Teammate 1.
 
 No clear improvement despite using RMSprop.
 
-### 3.2 Performance Metrics Comparison  
+**3.2 Performance Metrics Comparison**
 
 | Model                 | Precision (Class 0) | Recall (Class 0) | F1-Score (Class 0) | Precision (Class 1) | Recall (Class 1) | F1-Score (Class 1) | Accuracy | Macro Avg | Weighted Avg |
 |-----------------------|--------------------|------------------|-------------------|--------------------|------------------|-------------------|----------|------------|--------------|
