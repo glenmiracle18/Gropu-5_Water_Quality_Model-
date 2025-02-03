@@ -2,25 +2,25 @@
 ## Executive Summary
 
 This report details the implementation and analysis of a neural network model for water quality classification. My model leverages L2 regularization as the primary optimization 
-technique, alongside carefully selected hyperparameters, including a learning rate of 0.001, dropout rate of 0.7, and early stopping. The model achieved an accuracy of [Insert Accuracy]% on the test set, effectively balancing performance and generalization.
+technique, alongside carefully selected hyperparameters, including a learning rate of 0.001, dropout rate of 0.7, and early stopping. 
 
 
 ## 1. Model Architecture and Implementation Choices
 
-## 1.1 L2 Regularization Implementation
+# 1.1 L2 Regularization Implementation
 
 I implemented L2 regularization with a strength parameter of [0.01]. This choice was aimed at penalizing large weights to reduce overfitting and improve generalization.
 
 Why L2 Regularization? Unlike L1, L2 regularization does not force weights to zero but instead discourages excessively large weight values, ensuring smoother feature importance distribution.
 
-## Analysis of Impact:
+**Analysis of Impact:**
 
 Improved generalization by minimizing overfitting.
 
 
 Ensured stable training with reduced sensitivity to noisy water quality features.
 
-## 1.2 Learning Rate Selection
+**1.2 Learning Rate Selection**
 
 After extensive testing with learning rates of 0.1, 0.01, and 0.001, a value of 0.001 was selected.
 
@@ -30,13 +30,13 @@ Larger rates (0.001) provided faster convergence with less instability.
 
 Smaller rates (0.01, 0.1) prolonged training without significant gains in performance.
 
-## How It Was Validated:
+**How It Was Validated:**
 
 Loss curves were monitored for stability and convergence.
 
 Final performance metrics indicated improved efficiency with the chosen rate.
 
-## 1.3 Dropout Rate Configuration
+**1.3 Dropout Rate Configuration**
 
 To reduce overfitting, I implemented a dropout rate of 0.7.
 
@@ -52,7 +52,7 @@ The higher rate resulted in a more robust model that performed consistently acro
 
 Testing with rates like 0.5 and 0.6 showed relatively higher validation loss compared to 0.7.
 
-## 1.4 Early Stopping Implementation
+**1.4 Early Stopping Implementation**
 
 Early stopping was introduced to further prevent overfitting, with a patience value of [Insert Value], monitoring validation loss.
 
@@ -66,9 +66,9 @@ Prevented unnecessary computation.
 
 Ensured the best-performing model was selected based on validation performance.
 
-## 2. Performance Analysis and Results
+# 2. Performance Analysis and Results
 
-# 2.1 Model Performance Metrics
+**2.1 Model Performance Metrics**
 
 The model achieved the following results on the test set:
 
@@ -85,7 +85,7 @@ Macro Avg	[0.7083]
 
 Weighted Avg	[0.7083]
 
-## 2.2 Impact of Optimization Choices
+**2.2 Impact of Optimization Choices**
 
 The following observations highlight the impact of my optimization decisions:
 
@@ -97,11 +97,11 @@ Dropout Rate of 0.7 significantly reduced overfitting.
 
 Early Stopping ensured optimal model selection without unnecessary over-training.
 
-## 3. Comparative Analysis with Team Members
+# 3. Comparative Analysis with Team Members
 
-# 3.1 Regularization Approach Comparison
+**3.1 Regularization Approach Comparison**
 
-# My Model (L2 Regularization, Adam Optimizer)
+**My Model (L2 Regularization, Adam Optimizer)**
 
 Achieved higher precision and recall across both classes.
 
@@ -109,7 +109,7 @@ Balanced class performance, with Class 1 having reasonable recall (0.60).
 
 Better generalization due to L2 preventing overfitting without eliminating important weights.
 
-# Teammate 1 (L1 Regularization, Adam Optimizer)
+**Teammate 1 (L1 Regularization, Adam Optimizer)**
 
 Severely biased towards Class 0 with Precision (0.62) and Recall (1.00).
 
@@ -117,7 +117,7 @@ Class 1 completely misclassified (Precision = 0.00, Recall = 0.00, F1 = 0.00).
 
 The model may be too sparse, affecting learning on minority class data.
 
-# Teammate 2 (L1 Regularization, RMSprop Optimizer)
+**Teammate 2 (L1 Regularization, RMSprop Optimizer)**
 
 Performance is identical to Teammate 1.
 
@@ -133,7 +133,7 @@ No clear improvement despite using RMSprop.
 
 
 # 3.3 Unique Aspects and Advantages
-# Why My L2 Model is Better:
+**Why My L2 Model is Better:**
 
 Higher Accuracy (0.70) vs. (0.62) for L1 models.
 
@@ -141,7 +141,7 @@ Class 1 has better representation (Precision: 0.75, Recall: 0.60) while L1 model
 
 More balanced class distribution, whereas L1 models overfit to Class 0.
 
-## Why My Teammates' L1 Models Struggled:
+**Why My Teammates' L1 Models Struggled:**
 
 L1 regularization eliminated important weights, leading to complete failure on Class 1.
 
