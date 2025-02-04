@@ -5,7 +5,7 @@
 ## Executive Summary
 This report details the implementation and analysis of a neural network model for water quality classification. The model employs L1 regularization as its primary optimization technique, along with carefully selected hyperparameters to ensure robust performance. My approach achieved an accuracy of 62.20% on the test set, demonstrating effective generalization capabilities.
 
-## 1. Model Architecture and Implementation Choices
+## 1. Model Architecture and Implementation Choice
 
 ### 1.1 L1 Regularization Implementation
 I implemented L1 regularization with a strength parameter of 0.01. This specific value was chosen after experimental analysis showed that:
@@ -58,7 +58,7 @@ The model achieved the following performance metrics:
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| 0     | 0.62      | 1.00   | 0.77     | 306     |
+| 0     | 0.62      | 0.624   | 0.77     | 306     |
 | 1     | 0.00      | 0.00   | 0.00     | 186     |
 
 | Metric       | Score |
