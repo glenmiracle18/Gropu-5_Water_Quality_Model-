@@ -73,16 +73,12 @@ The model achieved the following results on the test set:
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-|   0   |   0.67    |  0.80  |   0.73   |    5    |
-|   1   |   0.75    |  0.60  |   0.67   |    5    |
+|   0   |   0.70    |  0.86  |   0.77  |    307   |
+|   1   |   0.63    |  0.39  |   0.49  |    185   |
 
 Metric	Score
 
-Accuracy	[0.7000]
-
-Macro Avg	[0.7083]
-
-Weighted Avg	[0.7083]
+Accuracy	[0.6870]
 
 **2.2 Impact of Optimization Choices**
 
@@ -126,7 +122,7 @@ No clear improvement despite using RMSprop.
 
 | Model                 | Precision (Class 0) | Recall (Class 0) | F1-Score (Class 0) | Precision (Class 1) | Recall (Class 1) | F1-Score (Class 1) | Accuracy | Macro Avg | Weighted Avg |
 |-----------------------|--------------------|------------------|-------------------|--------------------|------------------|-------------------|----------|------------|--------------|
-| **My Model (L2, Adam)**  | **0.67**           | **0.80**          | **0.73**           | **0.75**           | **0.60**          | **0.67**           | **0.70**  | **0.7083**  | **0.7083**    |
+| **My Model (L2, Adam)**  | **0.70**           | **0.86**          | **0.77**           | **0.75**           | **0.60**          | **0.67**           | **0.70**  | **0.7083**  | **0.7083**    |
 | **Teammate 1 (L1, Adam)**  | 0.62               | 1.00              | 0.77               | 0.00               | 0.00              | 0.00               | 0.62      | 0.31        | 0.39          |
 | **Teammate 2 (L1, RMSprop)** | 0.62               | 1.00              | 0.77               | 0.00               | 0.00              | 0.00               | 0.62      | 0.31        | 0.39          |
 
