@@ -53,7 +53,7 @@ Testing with rates like 0.5 and 0.6 showed relatively higher validation loss com
 
 **1.4 Early Stopping Implementation**
 
-Early stopping was introduced to further prevent overfitting, with a patience value of [Insert Value], monitoring validation loss.
+Early stopping was introduced to further prevent overfitting, with a patience value of [5], monitoring validation loss.
 
 Why Early Stopping?
 
@@ -164,5 +164,6 @@ Experiment with class weighting to reduce class imbalance issues.
 Appendix: Implementation Details
 ![image](https://github.com/user-attachments/assets/aa715168-8974-43a2-9b00-96a27d9a58e8)
 
-![image](https://github.com/user-attachments/assets/cb256799-738d-41ef-b02f-22d4eaf29cf1)
+![image](https://github.com/user-attachments/assets/403d3abc-b0d6-4bd1-9b6a-df273f5a14d3)
+
 
