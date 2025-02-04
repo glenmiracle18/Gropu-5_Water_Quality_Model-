@@ -1,19 +1,19 @@
-# Water Quality Classification Using Neural Networks with L1 Regularization - Glen Miracle Report
+# Water Quality Classification Using Neural Networks with L2 Regularization - Glen Miracle Report
 
 ![download](https://github.com/user-attachments/assets/66dc52a4-7684-4d03-b15e-a9b46ef1fd66)
 
 ## Executive Summary
-This report details the implementation and analysis of a neural network model for water quality classification. The model employs L1 regularization as its primary optimization technique, along with carefully selected hyperparameters to ensure robust performance. My approach achieved an accuracy of 62.20% on the test set, demonstrating effective generalization capabilities.
+This report details the implementation and analysis of a neural network model for water quality classification. The model employs L2 regularization as its primary optimization technique, along with carefully selected hyperparameters to ensure robust performance. My approach achieved an accuracy of 62.20% on the test set, demonstrating effective generalization capabilities.
 
 ## 1. Model Architecture and Implementation Choice
 
-### 1.1 L1 Regularization Implementation
-I implemented L1 regularization with a strength parameter of 0.01. This specific value was chosen after experimental analysis showed that:
+### 1.1 L2 Regularization Implementation
+I implemented L2 regularization with a strength parameter of 0.01. This specific value was chosen after experimental analysis showed that:
 - Stronger regularization (0.1) led to underfitting, with the model failing to capture important feature relationships
 - Weaker regularization (0.001) didn't sufficiently prevent overfitting
 - The chosen value (0.01) provided an optimal balance between model complexity and performance
 
-The impact of L1 regularization was particularly notable in:
+The impact of L2 regularization was particularly notable in:
 - Feature selection, where it effectively zeroed out weights for less important water quality parameters
 - Improved model generalization, as evidenced by reduced gap between training and validation performance
 - Enhanced model interpretability by highlighting the most significant water quality indicators
@@ -75,7 +75,7 @@ my optimization decisions showed significant impacts:
 
 ### 3.1 Regularization Approach Comparison
 Compared to team members' approaches:
-- Team Member 1 (L2 Regularization): my L1 approach showed better feature selection
+- Team Member 1 (L2 Regularization): my L2 approach showed better feature selection
 - Team Member 2 (Dropout only): my combined approach demonstrated superior generalization
 - Team Member 3 (Different architecture): my model achieved better efficiency with fewer parameters
 
@@ -85,7 +85,7 @@ Model comparison metrics:
 
 ### 3.3 Unique Aspects and Advantages
 my implementation stands out through:
-- More efficient feature utilization through L1 regularization
+- More efficient feature utilization through L2 regularization
 - Better handling of noisy water quality parameters
 - More interpretable feature importance rankings
 
@@ -96,7 +96,7 @@ my model demonstrates effective water quality classification through careful opt
 - Implementing cross-validation for more robust evaluation
 - Testing hybrid regularization approaches
 
-The L1 regularization-based approach proved particularly effective for this domain, offering both good performance and interpretability.
+The L2 regularization-based approach proved particularly effective for this domain, offering both good performance and interpretability.
 
 ## Appendix: Implementation Details!
 
