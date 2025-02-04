@@ -122,7 +122,7 @@ No clear improvement despite using RMSprop.
 
 | Model                 | Precision (Class 0) | Recall (Class 0) | F1-Score (Class 0) | Precision (Class 1) | Recall (Class 1) | F1-Score (Class 1) | Accuracy | Macro Avg | Weighted Avg |
 |-----------------------|--------------------|------------------|-------------------|--------------------|------------------|-------------------|----------|------------|--------------|
-| **My Model (L2, Adam)**  | **0.70**           | **0.86**          | **0.77**           | **0.75**           | **0.60**          | **0.67**           | **0.70**  | **0.7083**  | **0.7083**    |
+| **My Model (L2, Adam)**  | **0.70**           | **0.86**          | **0.77**           | **0.63**           | **0.39**          | **0.49**           | **0.69**  | **0.64**  | **0.67**    |
 | **Teammate 1 (L1, Adam)**  | 0.62               | 1.00              | 0.77               | 0.00               | 0.00              | 0.00               | 0.62      | 0.31        | 0.39          |
 | **Teammate 2 (L1, RMSprop)** | 0.62               | 1.00              | 0.77               | 0.00               | 0.00              | 0.00               | 0.62      | 0.31        | 0.39          |
 
@@ -130,9 +130,9 @@ No clear improvement despite using RMSprop.
 # 3.3 Unique Aspects and Advantages
 **Why My L2 Model is Better:**
 
-Higher Accuracy (0.70) vs. (0.62) for L1 models.
+Higher Accuracy (0.69) vs. (0.62) for L1 models.
 
-Class 1 has better representation (Precision: 0.75, Recall: 0.60) while L1 models failed completely.
+Class 1 has better representation (Precision: 0.63, Recall: 0.39) while L1 models failed completely.
 
 More balanced class distribution, whereas L1 models overfit to Class 0.
 
