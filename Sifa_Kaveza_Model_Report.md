@@ -37,19 +37,15 @@ Final performance metrics indicated improved efficiency with the chosen rate.
 
 **1.3 Dropout Rate Configuration**
 
-To reduce overfitting, I implemented a dropout rate of 0.7.
+To reduce overfitting, I implemented a dropout rate of 0.5.
 
-Why 0.7 Instead of 0.6?
+Why 0.5 Instead of 0.7 
 
-Experimentation showed that 0.6 allowed slight overfitting during training.
-
-A higher rate of 0.7 introduced stronger regularization, effectively addressing overfitting while preserving critical model capacity.
+A dropout rate of 0.7 provided stronger regularization, effectively reducing overfitting. However, it also constrained the model’s capacity, leading to suboptimal performance. In contrast, a dropout rate of 0.5 struck a balance, mitigating overfitting while preserving model capacity.
 
 Impact of Dropout Rate:
 
-The higher rate resulted in a more robust model that performed consistently across training and validation datasets.
-
-Testing with rates like 0.5 and 0.6 showed relatively higher validation loss compared to 0.7.
+A dropout rate of 0.5 improved generalization, preventing overfitting without excessively limiting the model. It maintained stable performance across training and validation, leading to lower validation loss and more reliable predictions.
 
 **1.4 Early Stopping Implementation**
 
